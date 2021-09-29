@@ -22,7 +22,32 @@
                 
             
         </div>
+
     </div>
+
+<div class="main-mobile">
+        <div class="mobile-container">
+
+                        <div class="mob-icn" @click="phonenav"><img src="../../../pics/list.svg" alt=""></div>
+
+                            <slide-up-down :active="active1" :duration="300">
+                                <div class="sliding">
+                                    <div class="slide-topic"><p>نمونه ها</p></div>
+                                    <div class="slide-topic"><p>سفارش</p></div>
+                                    <div class="slide-topic"><p>برآورد هزینه</p></div>
+                                    <div class="slide-topic"><p>خدمات</p></div>
+                                    <div class="slide-topic"><p>درباره ما</p></div>
+
+
+
+
+                                </div>
+                            </slide-up-down>
+
+        </div>
+</div>
+
+
 </div>
 </template>
 
@@ -34,6 +59,13 @@ export default {
             slide1:false,
             downicon1:true,
             upicon1:false,
+
+
+            active1:false,
+            active2:false,
+            downicon2:false,
+            upicon2:false,
+
         }
     },
     methods:{
@@ -43,9 +75,18 @@ export default {
             this.upicon1=!this.upicon1
 
 
+        },
+                phonenav(){
+            this.active1=!this.active1
+        },
+        exptoggle(){
+            // this.active2=!this.active2
+            this.downicon1=!this.downicon1
+            this.upicon1=!this.upicon1
         }
     }
-}
+    }
+
 
 </script>
 
@@ -166,5 +207,64 @@ export default {
     font-size: 17px;
     color: black;
 
+}
+
+
+    .mobile-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        /* height: 70px; */
+        background-color: rgba(209, 209, 209, 0.952);
+        align-items: center;
+        border-radius: 15px;
+        padding: 20px 0;
+        z-index: 1;
+    }
+    .sliding{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 30px;
+        width: 100%;
+
+}
+.slide-topic{
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        width: 360px;
+        margin-left: 30px;
+        /* background-color: rgba(209, 209, 209, 0.952); */
+
+}
+.slide-topic:active{
+    background-color: #fff;
+}
+.slide-topic p{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+}
+.main-mobile{
+    display: flex;
+    justify-content: center;
+}
+.mob-icn img{
+    width: 40px;
+}
+
+
+@media only screen and (min-width:960px) {
+    .mobile-container{
+        display:none;
+    }
+}
+
+@media only screen and (max-width:959px) {
+    .menu-container{
+        display:none;
+    }
 }
 </style>

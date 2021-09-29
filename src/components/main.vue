@@ -94,16 +94,17 @@
 </div>
 
  <Animation/>
+ <!-- <Phonenav/> -->
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12"></div>
     <div class="col-lg-4 col-md-6 col-sm-12"></div>
     <div class="col-lg-4 col-md-6 col-sm-12"></div>
 
   </div>
-</div>
+</div> -->
 
 
 <div class="bgc-box-last">
@@ -150,7 +151,7 @@
         <p>درباره ما</p>
       </div>
       <div class="div-footer-text">
-        <p class="footer-r">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+        <p class="footer-r ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
       </div>
     </div>
 
@@ -170,13 +171,15 @@ import Price from "./price-box/price-box.vue"
 import Menubar from "./Menubar/Menubar.vue"
 import Animation from "./Animation/Animation.vue"
 import Menu2 from "./Menubar/Menubar2.vue"
+import Phonenav from "./Menubar/Menu-phone.vue"
 export default {
   name: 'App',
   components: {
     Menubar,
     Animation,
     Price,
-    Menu2
+    Menu2,
+    Phonenav,
   },
   data(){
     return{
@@ -260,6 +263,7 @@ font-family: 'Lalezar', cursive;
 
 .bgc-box-last{
   background-image: url("../../pics/last.jpg");
+  /* background-color:blue; */
   width: 100vw;
   height: 60vh;
   background-size:cover;
@@ -334,6 +338,91 @@ padding: 10px;
   width: 100%;
   height: 20%;
 }
+
+@media only screen and (max-width:959px) {
+.bgc-box-last{
+    background-image: url("../../pics/last.jpg");
+  /* background-color:blue; */
+  width: 100vw;
+  height: 60vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.first-bgc-box{
+  background-image: url("../../pics/first.jpg");
+  width: 100vw;
+  height: 80vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: column;
+}
+.webook-text{
+font-family: 'Lalezar', cursive;
+  color: #fff;
+  font-size: 100px;
+  direction: rtl;
+}
+.webook-sub{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 40px;
+  color: #fff;
+  direction: rtl;
+}
+}
+
+@media only screen and (max-width:599px) {
+
+.webook-text{
+font-family: 'Lalezar', cursive;
+  color: #fff;
+  font-size: 60px;
+  direction: rtl;
+  margin: auto;
+}
+.webook-sub{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  direction: rtl;
+}
+
+.bgc-box-last{
+    background-image: url("../../pics/last.jpg");
+  /* background-color:blue; */
+  width: 100vw;
+  height: 100vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-bgc-box{
+  background-image: url("../../pics/first.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+}
+
+
 </style>
 
 
