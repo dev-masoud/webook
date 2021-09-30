@@ -171,7 +171,6 @@ import Price from "./price-box/price-box.vue"
 import Menubar from "./Menubar/Menubar.vue"
 import Animation from "./Animation/Animation.vue"
 import Menu2 from "./Menubar/Menubar2.vue"
-import Phonenav from "./Menubar/Menu-phone.vue"
 export default {
   name: 'App',
   components: {
@@ -179,7 +178,6 @@ export default {
     Animation,
     Price,
     Menu2,
-    Phonenav,
   },
   data(){
     return{
